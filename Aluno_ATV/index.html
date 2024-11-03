@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="list.js"></script>
+    <script defer src="form.js"></script>
+</head>
+
+<body>
+    <h1>CADASTRO DE ALUNOS</h1>
+    <div id="html_container" class="container">
+
+        <form action="" id="student_form">
+            <input type="text" name="form_name" id="form_name" placeholder="Digite o nome do estudante..." required/>
+            <input type="email" name="form_email" id="form_email" placeholder="Digite o email do estudante..." required/>
+            <input type="text" name="form_cpf" id="form_cpf" placeholder="Digite o CPF do estudante..." required/>
+            <input type="text" name="form_rg" id="form_rg" placeholder="Digite o RG do estudante..." required/>
+            <input type="tel" name="form_tel_student" id="form_tel_student" placeholder="Digite o telefone do responsável pelo estudante..." required/>
+            <input type="tel" name="form_tel_resp" id="form_tel_resp" placeholder="Digite o telefone do estudante..." required/>
+            <input type="tel" name="form_date" id="form_date" placeholder="Digite a data de nascimento do estudante (0000-00-00)..." required/>
+            <button>CADASTRAR</button>
+        </form>
+
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
+
+<script>
+    const firebaseConfig = {
+        //ALOCAR A CONFIG DO FIREBASE AQUI
+        apiKey: "AIzaSyDgJx0164AWJATw2lf-7mItjD_mWSKXlgg",
+        authDomain: "bd3-ativ-firebase.firebaseapp.com",
+        projectId: "bd3-ativ-firebase",
+        storageBucket: "bd3-ativ-firebase.firebasestorage.app",
+        messagingSenderId: "785976757732",
+        appId: "1:785976757732:web:35a269fa0418beba010bf1",
+        measurementId: "G-HSSTNGNH7J"
+    };
+
+    firebase.initializeApp(firebaseConfig)
+
+    const db = firebase.firestore()
+
+    console.log(db)
+
+</script>
+
+</html>
